@@ -32,7 +32,9 @@ main{
     justify-content:space-evenly;
 }
 article{
-    width: 255px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
     border: 5px;
     border-style:dotted;
     border-color: var(--text-color);
@@ -63,7 +65,9 @@ pre {
     border-radius: 12px;
     color: var(--code-color);
     background: linear-gradient(var(--background), var(--box-background));
-    font-family: monospace;
+    font-family: Consola, "Anadale Mono", "Lucida Console", "Lucida Sans Typewriter", monospace ;
+    white-space:pre-wrap;
+    overflow-x: auto;
     font-size:12px;
 }
 
@@ -73,21 +77,15 @@ footer{
 }
 
 @media screen and (max-width:992px) {
-    h2{
-        color:blue;
-    }
     main{
         flex-basis:content;
     }
     article{
-        min-width: 50px;
+        width: 35%;
     }
     
 }
 @media screen and (max-width:768px) {
-    h2{
-        color:orange;
-    }
     article{
         width:100%;
     }
